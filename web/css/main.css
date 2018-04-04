@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Exo"; }
+  font-family: "Exo";
+  box-sizing: border-box; }
 
 html {
   font-size: 16px; }
@@ -20,6 +21,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0); }
+    @media (min-width: 576px) {
+      .home .home__container {
+        width: auto; } }
   .home .home__portrait {
     max-height: 40vh;
     max-width: 75vw;
@@ -27,7 +31,8 @@ body {
     display: block; }
   .home .home__title {
     text-transform: uppercase;
-    color: #999;
+    color: #fff;
+    text-shadow: 0px 0px 14px #969696;
     font-size: 1.7rem;
     letter-spacing: 2px;
     margin: 0;
@@ -37,7 +42,7 @@ body {
     @media (min-width: 576px) {
       .home .home__title {
         font-size: 2.2rem;
-        padding: 0 30px; } }
+        padding: 0 20px; } }
     .home .home__title:before, .home .home__title:after {
       display: block;
       content: "";
@@ -65,7 +70,7 @@ body {
     margin: 20px 0 0; }
   .home .home__link {
     text-decoration: none;
-    color: #ccc;
+    color: #999;
     display: inline-block;
     font-size: 1.4rem;
     margin: 0 5px;
@@ -75,4 +80,4 @@ body {
         font-size: 1.75rem;
         margin: 0 10px; } }
     .home .home__link:hover {
-      color: #999; }
+      color: #ccc; }

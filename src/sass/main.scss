@@ -9,6 +9,7 @@ $xl: 1200px;
     margin: 0;
     padding: 0;
     font-family: "Exo";
+    box-sizing: border-box;
 }
 
 html {
@@ -33,6 +34,10 @@ body {
         top: 50%;
         left: 50%;
         transform: translate3d(-50%, -50%, 0);
+
+        @media (min-width: $sm) {
+            width: auto;
+        }
     }
 
     .home__portrait {
@@ -44,7 +49,8 @@ body {
 
     .home__title {
         text-transform: uppercase;
-        color: #999;
+        color: #fff;
+        text-shadow: 0px 0px 14px rgba(150, 150, 150, 1);
         font-size: 1.7rem;
         letter-spacing: 2px;
         margin:0;
@@ -54,7 +60,7 @@ body {
 
         @media (min-width: $sm) {
             font-size: 2.2rem;
-            padding: 0 30px;   
+            padding: 0 20px;   
         }
 
         &:before, &:after {
@@ -96,7 +102,7 @@ body {
 
     .home__link {
         text-decoration: none;
-        color: #ccc;
+        color: #999;
         display: inline-block;
         font-size: 1.4rem;
         margin: 0 5px;
@@ -108,7 +114,7 @@ body {
         }
 
         &:hover {
-            color: #999;
+            color: #ccc;
         }
     }
 }
