@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "Stack for sondayip.com",
   "author": "Sonda Yip",
+  "scripts": {
+    "start": "parcel serve src/pages/*.html src/pages/**/*.html",
+    "build": "parcel build src/pages/*.html src/pages/**/*.html"
+  },
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "@parcel/transformer-sass": "^2.0.1",
+    "gulp": "^4.0.2",
     "gulp-sass": "^3.2.1",
     "lite-server": "^2.3.0",
+    "parcel": "^2.0.1",
     "yarn": "^1.5.1"
   }
 }

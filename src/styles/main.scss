@@ -1,0 +1,362 @@
+$baseUrl : "/web/img/";
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Montserrat";
+}
+
+html {
+    font-size: 16px;
+}
+
+
+body[home] {
+    background-image: url("../img/whirlpool.png");
+}
+
+.home {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    
+    .-loaded &__portrait,
+    .-loaded &__title,
+    .-loaded &__subtitle,
+    .-loaded &__socials {
+        opacity: 1;
+    }
+
+    &__container {
+        width: 100%;
+
+        @media (min-width: $sm) {
+            width: auto;
+        }
+    }
+
+    &__portrait {
+        display: block;
+        max-height: 40vh;
+        max-width: 75vw;
+        margin: 0 auto 10px;
+        
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        
+        opacity: 0;
+        transition: 1s opacity linear;
+    }
+
+    &__title {
+        position: relative;
+        
+        display: inline-block;
+        margin:0;
+        padding: 0 15px;
+        
+        color: #fff;
+        
+        font-family: "Exo";
+        font-size: 1.7rem;
+        text-shadow: 0px 0px 14px rgba(150, 150, 150, 1);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        opacity: 0;
+        transition: 1s opacity 0.4s linear;
+
+        @media (min-width: $sm) {
+            padding: 0 20px;   
+            
+            font-size: 2.2rem;
+        }
+
+        &:before, &:after {
+            position: absolute;
+            top:50%;
+            
+            display: block;
+            width: 30px;
+            height: 1px;
+            
+            background-color: #999;
+            
+            content: "";
+        }
+
+        &:before {
+            left: -30px;
+        }
+
+        &:after {
+            right: -30px;
+        }
+    }
+
+    &__subtitle {
+        margin:0;
+        
+        color: #333;
+        
+        font-family: "Montserrat";
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        letter-spacing: 1px;
+        
+        opacity: 0;
+        transition: 1s opacity 0.4s linear;
+
+        @media (min-width: $sm) {
+            font-size: 1.15rem;
+        }
+    }
+
+    &__socials {
+        margin: 20px 0 0;
+
+        opacity: 0;
+        transition: 1s opacity 0.6s linear;
+    }
+
+    &__link {
+        display: inline-block;
+        margin: 0 10px;
+        
+        color: #999;
+        
+        font-size: 1.4rem;
+        text-decoration: none;
+        
+        cursor: pointer;
+        
+        @media (min-width: $sm) {
+            font-size: 1.75rem;
+        }
+
+        &:hover {
+            color: #ccc;
+        }
+    }
+}
+
+
+.main {
+    .hero {
+        background: url("https://i2.wp.com/isoflat.com/wp-content/uploads/2019/09/comp_13.gif?fit=800%2C600&ssl=1");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        &::before {
+            width: 100%;
+            height: 100%;
+            // background: url("https://www.toptal.com/designers/subtlepatterns/patterns/inflicted.png");
+            background: rgba(0,0,0,0.4);
+            content: "";
+            display: block;
+            position: absolute;
+            clip-path: polygon(0% 0%, 70% 0 , 30% 100%, 0% 100%);
+        }
+
+
+        & > div {
+            position: relative;
+            color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+
+            & > h1 {
+                text-align: center;
+                font-size: 35px;
+                text-shadow: 0px 0px 8px #000000;
+            }
+
+            & > span {
+                height: 5px;
+                width: 150px;
+                background: white;
+                display: block;
+                border-radius: 10px;
+                margin: 50px 0;
+            }
+
+            & > h4 , & > h3  {
+                text-shadow: 0px 0px 8px #000000;
+            }
+        }
+    }
+
+    .equipe {
+        background: url("https://www.toptal.com/designers/subtlepatterns/patterns/pinstriped_suit.png");
+        padding: 50px 0 ;
+        border-top: 5px solid #111;
+        border-bottom: 5px solid #111;
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .figure {
+            text-align: center;
+            img {
+                width: 200px;
+                border-radius: 50%;
+                border: solid 10px #353535;
+            }
+            p {
+                font-size: 16px;
+                color: white;
+                font-weight: 600;
+                margin-top: 35px;
+            }
+        }
+    }
+
+    .intro {
+        background: url("https://www.toptal.com/designers/subtlepatterns/patterns/dark_wall.png");
+        .profile {
+            
+            display: flex;
+            padding: 60px 0;
+                img {
+                    width: 200px;
+                    height: auto;
+                    border-radius: 20px;
+                    border: 10px solid rgba(150,150,150,0.5);
+                }
+
+            .bio {
+                margin-left: 30px;
+                color: white;
+                .title {
+                    margin-bottom: 30px;
+                }
+                p {
+                    margin-bottom: 20px;
+                }
+
+                ul {
+                    margin-left: 35px;
+                    li {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .metiers {
+        min-height: 100vh;
+        padding: 75px 0;
+        background: url("https://www.toptal.com/designers/subtlepatterns/patterns/squairy_light.png");
+        .header {
+            background: url("../img/prm1001/poste.jpeg");
+            height: 300px;
+            background-size: cover;
+            border-radius: 10px;
+        }
+
+        h3 {
+            margin: 40px 0;
+            font-size: 25px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+
+    .etudiant {
+        min-height: 100vh;
+        padding: 75px 0;
+        background: url("https://www.toptal.com/designers/subtlepatterns/patterns/geometry.png");
+        .container {
+            display: flex;
+            .figure{
+                background: url("https://images.unsplash.com/photo-1494809610410-160faaed4de0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80");
+                width: 300px;
+                height: 800px;
+                border-radius: 10px;
+                background-size: cover;
+                background-position: -55px center ;
+                transform: scaleX(-1);
+                flex-shrink: 0;
+                margin-right: 40px;
+            }
+            .content {
+
+                h2 {
+                    margin-bottom: 40px;
+                }
+                p{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .seperator {
+        height: 10px;
+        display:flex;
+        > span {
+            flex-grow: 1;
+            display: block;
+            &:nth-child(1){
+                background: #555;
+            }
+            &:nth-child(2){
+                background: #222;
+                flex-grow: 2;
+            }
+            &:nth-child(3){
+                background: #333;
+            }
+            &:nth-child(4){
+                background: #777;
+            }
+            &:nth-child(5){
+                background: #777;
+                flex-grow: 2;
+            }
+            &:nth-child(6){
+                background: #444;
+            }
+            &:nth-child(7){
+                background: #999999;
+            }
+        }
+    }
+}
