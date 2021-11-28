@@ -221,6 +221,13 @@ body[home] {
   padding: 60px 0;
 }
 
+@media screen and (max-width: 550px) {
+  .main .intro .profile {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .main .intro .profile img {
   width: 200px;
   height: auto;
@@ -231,6 +238,7 @@ body[home] {
 .main .intro .profile .bio {
   margin-left: 30px;
   color: white;
+  font-size: 20px;
 }
 
 .main .intro .profile .bio .title {
@@ -285,68 +293,32 @@ body[home] {
   border-radius: 10px;
 }
 
-.main .metiers {
-  min-height: 100vh;
-  padding: 75px 0;
+.main .metiersDec {
   background: url("https://www.toptal.com/designers/subtlepatterns/patterns/squairy_light.png");
-  background-attachment: fixed;
 }
 
-.main .metiers .header {
+.main .metiersDec .header {
   background: url("poste.2685c6cd.jpeg");
-  height: 300px;
-  background-size: cover;
-  border-radius: 30px;
 }
 
-.main .metiers h3 {
-  margin: 40px 0;
-  font-size: 25px;
-}
-
-.main .metiers p {
-  margin-bottom: 20px;
-}
-
-.main .metiers ul {
-  margin-left: 30px;
-  margin-bottom: 20px;
-}
-
-.main .etudiant {
-  min-height: 100vh;
-  padding: 75px 0;
+.main .etudiantDec {
   background: url("https://www.toptal.com/designers/subtlepatterns/patterns/geometry.png");
-  background-attachment: fixed;
 }
 
-.main .etudiant .container {
-  display: flex;
-}
-
-.main .etudiant .container .figure {
-  background: url("https://images.unsplash.com/photo-1494809610410-160faaed4de0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80");
-  width: 300px;
-  height: 800px;
-  border-radius: 10px;
-  background-size: cover;
+.main .etudiantDec .container .figure {
   background-position: -55px center;
-  transform: scaleX(-1);
-  flex-shrink: 0;
-  margin-right: 40px;
+  background: url("https://images.unsplash.com/photo-1494809610410-160faaed4de0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80");
 }
 
-.main .etudiant .container .content h2 {
-  margin-bottom: 40px;
+.main .perspectiveMetierDec {
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/dot-grid.png");
 }
 
-.main .etudiant .container .content p {
-  margin-bottom: 20px;
+.main .perspectiveMetierDec .header {
+  background: url("https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2696&q=80");
 }
 
 .main .metierDep {
-  height: 100vh;
-  background: #111;
   color: white;
   padding: 100px 0;
   background: url("https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex-dark.png");
@@ -363,18 +335,104 @@ body[home] {
   margin-left: 30px;
 }
 
+@media screen and (max-width: 550px) {
+  .main .metierDep .figure {
+    height: auto !important;
+  }
+}
+
 .main .metierDep .figure img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 30px;
 }
 
-.main .metierDep .content h2 {
-  margin-bottom: 50px;
+.main .etudiantDep {
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/stripes-light.png");
 }
 
-.main .metierDep .content p {
+.main .etudiantDep .header {
+  background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2371&q=80");
+}
+
+.main .perspectiveMetierDep {
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/ep_naturalwhite.png");
+}
+
+.main .perspectiveMetierDep .figure {
+  background: url("https://images.unsplash.com/photo-1579389083395-4507e98b5e67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80");
+}
+
+.main .layout1 {
+  min-height: 100vh;
+  padding: 75px 0;
+  background-attachment: fixed;
+  font-size: 20px;
+}
+
+.main .layout1 .header {
+  height: 300px;
+  background-size: cover;
+  border-radius: 30px;
+  background-position: center center;
+}
+
+.main .layout1 h3 {
+  margin: 40px 0;
+  font-size: 25px;
+}
+
+.main .layout1 p {
   margin-bottom: 20px;
+}
+
+.main .layout1 ul {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.main .layout2 {
+  min-height: 100vh;
+  padding: 75px 0;
+  background-attachment: fixed;
+}
+
+.main .layout2 .container {
+  display: flex;
+}
+
+@media screen and (max-width: 550px) {
+  .main .layout2 .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.main .layout2 .container .figure {
+  width: 300px;
+  height: 800px;
+  border-radius: 10px;
+  background-size: cover;
+  transform: scaleX(-1);
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+
+@media screen and (max-width: 550px) {
+  .main .layout2 .container .figure {
+    width: 100%;
+    height: 200px;
+    margin: 0 0 20px;
+  }
+}
+
+.main .layout2 .container .content h2 {
+  margin-bottom: 40px;
+}
+
+.main .layout2 .container .content p {
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .main .container {
