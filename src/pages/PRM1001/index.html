@@ -11,6 +11,10 @@
     <link rel="shortcut icon" href="../favicon.ico?v=3" type="image/x-icon" />
     <link rel="icon" href="../favicon.ico?v=3" type="image/x-icon" />
     <link rel="stylesheet" href="../../styles/main.scss" />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Exo:900|Montserrat:300,700,900"
@@ -25,6 +29,42 @@
     <script>
       window.onload = function () {
         document.querySelector("body").classList.add("-loaded");
+        google.charts.load("current", {packages: ["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+          var dataEtudiant = google.visualization.arrayToDataTable([
+            ["Étudiants", "pourcentage"],
+            ["étudiant venant du secondaire", 75],
+            ["étudiant déjà au cégep", 15],
+            ["retour au étude", 10],
+          ]);
+
+          var dataParcours = google.visualization.arrayToDataTable([
+            ["nombre d'année", "année"],
+            ["3 ans", 60],
+            ["4 ans ou plus", 40],
+          ]);
+
+          // Optional; add a title and set the width and height of the chart
+          var options = {
+            width: 550,
+            height: 400,
+            backgroundColor: {fill: "transparent"},
+          };
+
+          // Display the chart inside the <div> element with id="piechart"
+          var chartEtudiant = new google.visualization.PieChart(
+            document.getElementById("statsEtudiantDec")
+          );
+          chartEtudiant.draw(dataEtudiant, options);
+
+          var chartParcours = new google.visualization.PieChart(
+            document.getElementById("statsParcours")
+          );
+          chartParcours.draw(dataParcours, options);
+        }
       };
     </script>
   </head>
@@ -72,7 +112,7 @@
             </div>
             <div class="bio">
               <div class="title">
-                <h3>Cedric Corriveau-Mercier</h3>
+                <h3>Cédric Corriveau-Mercier</h3>
                 <h4>Technicien en travaux pratiques Espace-Moebius</h4>
               </div>
               <p>
@@ -105,8 +145,8 @@
             </div>
             <div class="bio">
               <div class="title">
-                <h3>Mustapha Fall</h3>
-                <h4>Enseignant au centre EMICA</h4>
+                <h3>Moustapha Fall</h3>
+                <h4>Enseignant au DEP en Soutien Informatique (EMICA)</h4>
               </div>
               <p>
                 Je suis enseignant en soutien informatique à l'école des métiers
@@ -219,9 +259,16 @@
               souvent ce domaine comme une option pour se réorienter. Ainsi les
               étudiants sont de tout âge( 18 - 45 ).
             </p>
+            <div id="statsEtudiantDec"></div>
+
             <p>
-              Un domaine qui attire majoritairement les hommes, mais, avec le
-              temps, les femmes démontrent de plus en plus d’intérêt.
+              Un domaine qui
+              <span class="bold">attire majoritairement les hommes</span>
+              , mais, avec le temps,
+              <span class="bold">
+                les femmes démontrent de plus en plus d’intérêt
+              </span>
+              .
             </p>
             <p>
               Les étudiants ont tendance à sous-estimer la charge de travail qui
@@ -229,13 +276,17 @@
             </p>
             <p>
               Le programme est offert sur 3 ans, mais beaucoup d’étudiants
-              quittent le programme ou étalent leurs cours sur 4 ans ou plus
-              afin d'alléger la charge de travail.
+              quittent le programme ou étalent leurs cours sur
+              <span class="bold">
+                4 ans ou plus afin d'alléger la charge de travail
+              </span>
+              .
             </p>
+            <div id="statsParcours"></div>
             <p>
-              Les programmes en multimédia ne demandent que des mathématiques du
-              secondaire 4 dans certains cégeps, par contre la majorité ne
-              demand qu'un DES.
+              Cette technique ne demandent que des mathématiques du secondaire 4
+              dans certains cégeps, par contre considérant que le programme
+              n'est donné que 10 cégeps, ce programme est bien contingenté.
             </p>
             <p>
               La techniques d'intégration multimédia permet à l' étudiant
@@ -244,6 +295,21 @@
               l’obtention de leur DEC, mais d'autres vont se spécialiser à
               l’université.
             </p>
+
+            <ul>
+              <li>
+                50% des finissants continuent à l’université. (TIM Édouard,
+                2019)
+              </li>
+              <li>
+                50% des finissants entrent directement sur le marché du travail.
+                (TIM Édouard, 2019)
+              </li>
+              <li>Taux de placement de 90% (TIM Édouard, 2019)</li>
+              <li>
+                Salaire moyen des diplômés: 28,37$/h (Collège Montmorency, s.d.)
+              </li>
+            </ul>
           </div>
         </div>
       </section>
