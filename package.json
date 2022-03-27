@@ -5,7 +5,7 @@
   "author": "Sonda Yip",
   "scripts": {
     "start": "parcel serve src/pages/*.html src/pages/**/*.html",
-    "build": "parcel build src/pages/*.html src/pages/**/*.html"
+    "build": "rm -f -r docs/ && parcel build --dist-dir docs/ src/pages/*.html src/pages/**/*.html"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.1",

@@ -135,8 +135,13 @@ body[home] {
   color: #ccc;
 }
 
+.main .bold {
+  font-weight: bold;
+}
+
 .main .hero {
   background: url("https://i2.wp.com/isoflat.com/wp-content/uploads/2019/09/comp_13.gif?fit=800%2C600&ssl=1");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -220,6 +225,13 @@ body[home] {
   padding: 60px 0;
 }
 
+@media screen and (max-width: 550px) {
+  .main .intro .profile {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .main .intro .profile img {
   width: 200px;
   height: auto;
@@ -230,6 +242,7 @@ body[home] {
 .main .intro .profile .bio {
   margin-left: 30px;
   color: white;
+  font-size: 20px;
 }
 
 .main .intro .profile .bio .title {
@@ -248,61 +261,182 @@ body[home] {
   margin-bottom: 5px;
 }
 
-.main .metiers {
+.main .introDec {
   min-height: 100vh;
-  padding: 75px 0;
-  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/squairy_light.png");
+  display: flex;
+  background: url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
+  background-attachment: fixed;
+  background-size: cover;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.main .metiers .header {
-  background: url("poste.2685c6cd.jpeg");
-  height: 300px;
-  background-size: cover;
+.main .introDec h1 {
+  font-size: 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px;
   border-radius: 10px;
 }
 
-.main .metiers h3 {
+.main .introDep {
+  min-height: 100vh;
+  display: flex;
+  background: url("https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
+  background-attachment: fixed;
+  background-size: cover;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main .introDep h1 {
+  font-size: 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.main .metiersDec {
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/squairy_light.png");
+}
+
+.main .metiersDec .header {
+  background: url("poste.2685c6cd.jpeg");
+}
+
+.main .etudiantDec {
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/geometry.png");
+}
+
+.main .etudiantDec .container .figure {
+  background-position: -55px center;
+  background: url("https://images.unsplash.com/photo-1494809610410-160faaed4de0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80");
+}
+
+.main .perspectiveMetierDec {
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/dot-grid.png");
+}
+
+.main .perspectiveMetierDec .header {
+  background: url("https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2696&q=80");
+}
+
+.main .metierDep {
+  color: white;
+  padding: 100px 0;
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex-dark.png");
+}
+
+.main .metierDep .container {
+  display: flex;
+}
+
+.main .metierDep .figure {
+  width: 300px;
+  order: 1;
+  flex-shrink: 0;
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 550px) {
+  .main .metierDep .figure {
+    height: auto !important;
+  }
+}
+
+.main .metierDep .figure img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.main .etudiantDep {
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/stripes-light.png");
+}
+
+.main .etudiantDep .header {
+  background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2371&q=80");
+}
+
+.main .perspectiveMetierDep {
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/ep_naturalwhite.png");
+}
+
+.main .perspectiveMetierDep .figure {
+  background: url("https://images.unsplash.com/photo-1579389083395-4507e98b5e67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80");
+}
+
+.main .layout1 {
+  min-height: 100vh;
+  padding: 75px 0;
+  background-attachment: fixed;
+  font-size: 20px;
+}
+
+.main .layout1 .header {
+  height: 300px;
+  background-size: cover;
+  border-radius: 30px;
+  background-position: center center;
+}
+
+.main .layout1 h3 {
   margin: 40px 0;
   font-size: 25px;
 }
 
-.main .metiers p {
+.main .layout1 p {
   margin-bottom: 20px;
 }
 
-.main .metiers ul {
+.main .layout1 ul {
   margin-left: 30px;
   margin-bottom: 20px;
 }
 
-.main .etudiant {
+.main .layout2 {
   min-height: 100vh;
   padding: 75px 0;
-  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/geometry.png");
+  background-attachment: fixed;
 }
 
-.main .etudiant .container {
+.main .layout2 .container {
   display: flex;
 }
 
-.main .etudiant .container .figure {
-  background: url("https://images.unsplash.com/photo-1494809610410-160faaed4de0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80");
+@media screen and (max-width: 550px) {
+  .main .layout2 .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.main .layout2 .container .figure {
   width: 300px;
   height: 800px;
   border-radius: 10px;
   background-size: cover;
-  background-position: -55px center;
   transform: scaleX(-1);
   flex-shrink: 0;
   margin-right: 40px;
 }
 
-.main .etudiant .container .content h2 {
+@media screen and (max-width: 550px) {
+  .main .layout2 .container .figure {
+    width: 100%;
+    height: 200px;
+    margin: 0 0 20px;
+  }
+}
+
+.main .layout2 .container .content h2 {
   margin-bottom: 40px;
 }
 
-.main .etudiant .container .content p {
+.main .layout2 .container .content p {
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .main .container {
