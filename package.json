@@ -3,16 +3,21 @@
   "version": "1.0.0",
   "description": "Stack for sondayip.com",
   "author": "Sonda Yip",
+  "license": "UNLICENSED",
   "scripts": {
-    "start": "parcel serve src/pages/*.html src/pages/**/*.html",
+    "start": "parcel serve src/*.html src/pages/*.html src/pages/**/*.html",
     "build": "rm -f -r docs/ && parcel build --dist-dir docs/ src/pages/*.html src/pages/**/*.html"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.1",
-    "gulp": "^4.0.2",
-    "gulp-sass": "^3.2.1",
-    "lite-server": "^2.3.0",
-    "parcel": "^2.0.1",
-    "yarn": "^1.5.1"
+    "@parcel/transformer-sass": "2.12.0",
+    "@types/react": "^18.3.8",
+    "@types/react-dom": "^18.3.0",
+    "parcel": "2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-components": "^6.1.13"
   }
 }
